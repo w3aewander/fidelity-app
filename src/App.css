@@ -1,0 +1,72 @@
+root:{
+  --app-background: '#f21';
+  --app-fundo-form: '#ff9a0a';
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  border-radius: 50%;
+  height: 60vmin;
+  width: 60vmin;
+  pointer-events: none;
+}
+
+.App-container{
+
+  flex: 1;
+  background-color: var(--app-background);
+  height:100vh;
+
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: rgb(225, 45, 9);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.App-title {
+  margin: 5px;
+  padding: 25px;
+  color: rgb(233, 230, 229);
+  font-size: 40px;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.btn {
+  border-width: thin;
+  padding: 5px;
+  height: 40px;
+  width: 120px;
+}
+
+.btn-primary {
+    background-color: #e5b517;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
