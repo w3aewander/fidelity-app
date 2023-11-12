@@ -4,7 +4,7 @@ import { View, Text, StyleSheet } from "react-native";
 
 const CheckinLogRow = ({ log }) => {
 
-    const msg = (log.length === 10)
+    const msg = (log.length >= 10)
         ? "Parabéns! Você conquistou um almoço grátis."
         : "Seus pontos estão sendo computados no programa de fidelidade."
 
