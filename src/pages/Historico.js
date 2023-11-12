@@ -12,7 +12,7 @@ const Historico = ({ navigation }) => {
         <View style={styles.container}>
             <View>
                 <Text style={styles.Title}>
-                    Históricos de uso do App
+                    Histórico de uso do App
                 </Text>
 
                 <View>
