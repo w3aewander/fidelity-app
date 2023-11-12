@@ -17,7 +17,7 @@ export default function TelaInicial({ navigation }) {
                 <img src={logo} className="App-logo" alt="logo" />
 
                 <AppTitle title="Fidelity App" />
-                <WVersion version='20231111.2' />
+                <WVersion version='20231111.2' codename='start' />
 
                 <View style={{ justifyContent: 'center', flexDirection: 'row' }}>
                     <WButton className='btn btn-primary' title='Check In' onClick={() => navigation.navigate('Checkin')}>
