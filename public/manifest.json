@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Fidelity App",
+  "name": "Aplicativo para controle do programa de fidelidade de clientes",
   "icons": [
     {
       "src": "favicon.ico",

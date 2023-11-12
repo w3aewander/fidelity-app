@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 import WButton from "../components/WButton";
 
 import '../App.css'
@@ -13,7 +13,7 @@ const Checkin = ({ navigation }) => {
                 <Text style={{width: 280, padding: 10, textAlign: 'center', color: '#fafafa'}}>
                     Exiba o qrcode para AppMaster para computar o checkin
                 </Text>
-                <img src={qrcode} width={300} />
+                <img src={qrcode} width={300} alt={'imagem do qrcode'}/>
 
                 <View style={{justifyContent: 'center', alignItems: 'center', margin: 15 }}> 
                 <WButton 

@@ -1,4 +1,4 @@
-root:{
+:root{
   --app-background: '#f21';
   --app-fundo-form: '#ff9a0a';
 }
@@ -60,6 +60,13 @@ root:{
 
 .btn-primary {
     background-color: #e5b517;
+}
+
+.App-version{
+    flex:1;
+    font-size: .8rem;
+    color: '#fafafa';
+    height: 30px;
 }
 
 @keyframes App-logo-spin {

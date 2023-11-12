@@ -1,6 +1,7 @@
 import React from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 import WButton from "../components/WButton";
+
 
 import '../App.css'
 
