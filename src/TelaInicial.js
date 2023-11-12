@@ -1,7 +1,7 @@
 import React from "react"
-import {  View, Image } from 'react-native';
+import { View, Image } from 'react-native';
 import WButton from "./components/WButton";
-
+import WVersion from "./components/WVersion";
 import logo from './img/prato.jpeg';
 
 import './App.css';
@@ -17,8 +17,9 @@ export default function TelaInicial({ navigation }) {
                 <img src={logo} className="App-logo" alt="logo" />
 
                 <AppTitle title="Fidelity App" />
+                <WVersion version='20231111.2' />
 
-                <View style={{justifyContent: 'center', flexDirection: 'row' }}>
+                <View style={{ justifyContent: 'center', flexDirection: 'row' }}>
                     <WButton className='btn btn-primary' title='Check In' onClick={() => navigation.navigate('Checkin')}>
                         Check In
                     </WButton>
@@ -26,7 +27,6 @@ export default function TelaInicial({ navigation }) {
                         Cadastro
                     </WButton>
                 </View>
-
             </header>
         </View>);
 }
