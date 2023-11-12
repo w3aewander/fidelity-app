@@ -1,6 +1,5 @@
 import React from "react";
 import { View } from "react-native";
-import WButton from "./WButton";
 
 
 const WSQrCode = (props) => {
