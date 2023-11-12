@@ -1,30 +1,40 @@
-import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import React, {useState} from "react";
+import { View, Text, StyleSheet, Image } from "react-native";
 import WButton from "../components/WButton";
 
 import '../App.css'
-import qrcode from '../img/qrcode.jpeg'
+
+
+
+
 
 const Checkin = ({ navigation }) => {
-
+    
+    const [qrcode, setQrCode] = useState('');
+    
     return (
         <View style={styles.container}>
             <View>
                 <Text style={{width: 280, padding: 10, textAlign: 'center', color: '#fafafa'}}>
                     Exiba o qrcode para AppMaster para computar o checkin
                 </Text>
-                <img src={qrcode} width={300} alt={'imagem do qrcode'}/>
-
-                <View style={{justifyContent: 'center', alignItems: 'center', margin: 15 }}> 
+                
+                <View style={{flexDirection: 'row', justifyContent: 'center', alignItems: 'center', margin: 15 }}> 
                 <WButton 
                    className={'btn btn-primary'}
                    title = 'Tela Inicial'
                    onClick={ () => navigation.navigate('TelaInicial') }>  
                    Tela Inicial  
                 </WButton> 
-
+                <WButton 
+                   className={'btn btn-primary'}
+                   title = 'Gerar QrCode'
+                   onClick={ () => navigation.navigate('Cadastro') }>   
+                   Gerar QrCode 
+                </WButton> 
                 </View>
                 
+
 
             </View>
         </View>

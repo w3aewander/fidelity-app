@@ -10,7 +10,7 @@ import Historico from './pages/Historico';
 
 const Stack = createStackNavigator();
 
-export default function Routes() {
+export default function Routes({url}) {
   return (
     <NavigationContainer>
         
