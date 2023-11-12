@@ -2,15 +2,18 @@ import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
 
-const CheckinLogRow = ({log}) => {
+const CheckinLogRow = ({ log }) => {
     return (
         <View style={styles.Table}>
             <View style={styles.Thead}>
-                <Text style={styles.Tr}>Data do checkin</Text>
+                <Text style={styles.TheadText}>Data do checkin</Text>
             </View>
             {log.map(
                 (v, i) => <View style={styles.Tr} key={i}><Text style={styles.Td}>{v.date}</Text></View>)
-        }</View>)
+            }<View style={styles.Tfooter}>
+                <Text style={styles.TfooterText}>Pontos: {log.length}</Text>
+            </View>
+        </View>)
 }
 
 const styles = StyleSheet.create({
@@ -33,11 +36,10 @@ const styles = StyleSheet.create({
         width: 'auto',
     },
     Thead: {
-        flex: 1,
         padding: 0,
         fontSize: 15,
         backgroundColor: '#fda',
-        
+
     },
     Th: {
         padding: 0,
@@ -46,6 +48,21 @@ const styles = StyleSheet.create({
     Td: {
         color: '#fafafa',
         fontSize: '1rem',
+        padding: 4,
+    },
+    TheadText: {
+        padding: 4,
+        fontSize: 20,
+        backgroundColor: '#fd8',
+    },
+    Tfooter: {
+        padding: 0,
+        fontSize: 25,
+        backgroundColor: '#fd8',
+    },
+    TfooterText: {
+        fontSize: 20,
+        color: '#000',
         padding: 4,
     }
 
