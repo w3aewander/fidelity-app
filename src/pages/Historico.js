@@ -1,7 +1,8 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import WButton from "../components/WButton";
-
+import checkinlog from '../data/checkin_log.json'
+import CheckinLogRow from "../components/CheckinLogRow";
 
 import '../App.css'
 
@@ -10,23 +11,26 @@ const Historico = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <View>
-                <Text style={{width: 280, padding: 10, textAlign: 'center', color: '#fafafa'}}>
-                    Histórico de Checkins
-                </Text>
-                <Text>
-                    Aqui serão registrados os Históricos de uso do App
+                <Text style={styles.Title}>
+                    Históricos de uso do App
                 </Text>
 
-                <View style={{justifyContent: 'center', alignItems: 'center', margin: 15 }}> 
-                <WButton 
-                   className={'btn btn-primary'}
-                   title = 'Tela Inicial'
-                   onClick={ () => navigation.navigate('TelaInicial') }>  
-                   Tela Inicial  
-                </WButton> 
+                <View>
+
+                <CheckinLogRow log={checkinlog} />
+                   
+                </View>
+
+                <View style={{ justifyContent: 'center', alignItems: 'center', margin: 15 }}>
+                    <WButton
+                        className={'btn btn-primary'}
+                        title='Tela Inicial'
+                        onClick={() => navigation.navigate('TelaInicial')}>
+                        Tela Inicial
+                    </WButton>
 
                 </View>
-                
+
 
             </View>
         </View>
@@ -45,6 +49,12 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         fontSize: 'calc(10px + 2vmin)',
         color: 'white',
+    },
+    Title: {
+        fontSize: 25,
+        color: '#fafafa',
+        justifyContent: 'center',
+        textAlign: 'center',
     }
 })
 
