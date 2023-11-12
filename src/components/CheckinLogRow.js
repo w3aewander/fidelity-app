@@ -3,22 +3,37 @@ import { View, Text, StyleSheet } from "react-native";
 
 
 const CheckinLogRow = ({ log }) => {
+
+    const msg = (log.length === 10)
+        ? "Parabéns! Você conquistou um almoço grátis."
+        : "Seus pontos estão sendo computados no programa de fidelidade."
+
     return (
-        <View style={styles.Table}>
-            <View style={styles.Thead}>
-                <Text style={styles.TheadText}>Data do checkin</Text>
+        <View>
+
+            <View style={styles.Msg}>
+                <Text style={styles.MsgText}>{msg}</Text>
             </View>
-            {log.map(
-                (v, i) => <View style={styles.Tr} key={i}><Text style={styles.Td}>{v.date}</Text></View>)
-            }<View style={styles.Tfooter}>
-                <Text style={styles.TfooterText}>Pontos: {log.length}</Text>
+
+            <View >
+                <View style={styles.Thead}>
+                    <Text style={styles.TheadText}>Data do checkin</Text>
+                </View>
+                {log.map(
+                    (v, i) => <View style={styles.Tr} key={i}><Text style={styles.Td}>{v.date}</Text></View>)
+                }<View style={styles.Tfooter}>
+                    <Text style={styles.TfooterText}>Pontos: {log.length}</Text>
+                </View>
+
             </View>
         </View>)
 }
 
 const styles = StyleSheet.create({
     Table: {
-        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: 390,
         marginTop: 15,
         borderWidth: 1,
         borderColor: '#fafafa',
@@ -26,7 +41,6 @@ const styles = StyleSheet.create({
         minWidth: 400,
         maxWidth: 400,
         height: 'auto',
-        padding: 0,
     },
     Tr: {
         display: 'table-row',
@@ -64,6 +78,15 @@ const styles = StyleSheet.create({
         fontSize: 20,
         color: '#000',
         padding: 4,
+    },
+    Msg: {
+        marginTop: 10,
+        marginBottom: 10,
+    },
+    MsgText: {
+        fontSize: 15,
+        padding: 4,
+        color: '#fff',
     }
 
 })
